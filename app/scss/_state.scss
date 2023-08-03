@@ -1,0 +1,94 @@
+.state {
+
+    height: 42rem;
+    margin-top: -2rem;
+    padding-top: 13rem;
+    padding-bottom: 10rem;
+    padding-left: 10rem;
+    padding-right: 15rem;
+    background-image: linear-gradient($veryDarkGrayBlue, $veryDarkDesaturatedBlue);
+    border-top-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakPointsDown(large){
+        height: 60rem;
+        flex-direction: column;
+        margin-top: 23rem;
+        padding-bottom: 5rem;
+    }
+    @include breakPointsDown(medium){
+        padding-bottom: 0rem;
+    }
+    @include breakPointsDown(small){
+        margin-top: 10rem;
+        height: 60rem;
+    }
+
+
+    
+    img {
+        margin-right: 5rem;
+        @include breakPointsDown(large){
+            position: relative;
+            top: -16rem;
+        }
+        @include breakPointsDown(medium){
+            width: 45rem;
+        }
+        @include breakPointsDown(small){
+            width: 30rem;
+            margin-left: 8rem;
+            position: relative;
+            top: -18rem;
+        }
+    }
+
+    &__content {
+        color: $white;
+        // padding-right: 15rem;
+        margin-left: 5rem;
+        @include breakPointsDown(large){
+            position: relative;
+            bottom: 22rem;
+            padding-top: 6rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 500;
+            padding-bottom: 3rem;
+            @include breakPointsDown(large){
+                font-size: 5rem;
+                margin: 0 auto;
+            }
+            @include breakPointsDown(medium){
+                font-size: 4rem;
+            }
+            @include breakPointsDown(small){
+                padding-top: 2rem;
+                font-size: 4rem;
+                font-weight: 400;
+            }
+        }
+        p {
+            width: 500px;
+            font-size: 1.4rem;
+            line-height: 3rem;
+            opacity: .6;
+            @include breakPointsDown(large){
+                font-size: 2rem;
+                margin: 0 auto;
+                width: 600px;
+            }
+            @include breakPointsDown(small){
+                font-size: 3rem;
+                line-height: 2.5rem;
+                font-size: 1.6rem;
+                width: 300px;
+            }
+        }
+    }
+}
